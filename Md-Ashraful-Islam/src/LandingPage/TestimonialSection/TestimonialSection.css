@@ -1,0 +1,121 @@
+/* TestimonialSection.css */
+
+/* Target the carousel arrows */
+.carousel .control-next.control-arrow, .carousel .control-prev.control-arrow {
+    width: 30px;
+    height: 30px;
+    background: white; /* Remove default background */
+    
+  }
+  
+  /* Adjust the arrow icon size */
+  .carousel .control-next.control-arrow::before, .carousel .control-prev.control-arrow::before {
+    border-width: 4px; /* Adjust the arrow icon size */
+    border-top: none;
+    border-bottom: none;
+    height: 20px;
+  }
+  
+  /* Customize the position if needed */
+  .carousel .control-next.control-arrow {
+    right: 10px; /* Adjust the right position */
+    top: 50%;
+  }
+  
+  .carousel .control-prev.control-arrow {
+    left: 10px; /* Adjust the left position */
+    top: 50%;
+  }
+  .text-white{
+    color:white !important;
+    font-family: poppins !important;
+  }
+  .testimonial-p{
+    line-height: 20px !important;
+    letter-spacing: 1px !important;
+    font-size: 15px !important;
+    font-family: poppins !important;
+  }
+  .margin-0{
+    margin:0px !important;
+  }
+  .containerTest{
+    background: url("https://thecleverspace.com/wp-content/uploads/2021/01/blur-blu.png"); 
+    /* https://thecleverspace.com/wp-content/uploads/2021/01/blur-ora-1.png */
+    background-repeat: no-repeat;
+    background-size:350px;
+    background-position-x:80px ;
+    background-position-y: 150px;
+    background-blend-mode:overlay;
+  }
+  /* model & arrow */
+  .custom-arrow {
+    background: transparent;
+    border: none;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.479);
+    cursor: pointer;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .dot {
+    border: 2px solid black;
+    padding: 3px !important;
+    margin: 4px !important;
+  }
+  
+  .dot.selected {
+    border: 2px solid;
+    border-image: linear-gradient(to right, purple, green, blue);
+    border-radius: 50px;
+    border-image-slice: 1;
+  }
+  
+  .carousel .control-dots{
+    bottom: -30px !important;
+  }
+  .carousel.carousel-slider{
+    overflow: visible;
+  }
+  .custom-prev {
+    left: 0;
+  }
+  
+  .custom-next {
+    right: 0;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 48));
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    color: white !important;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }

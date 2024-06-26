@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#root{
+  background-color: #0f0f0f;
+  background-size: cover;
+  height:fit-content;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title{
+  font-size: 100px !important;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Modal Box */
+.modal-box {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensure it's above the overlay */
+}
+/* Landing Hero CSS*/
+.hero-section,.navbar{
+  background-image: linear-gradient(to right, rgba(0, 6, 95, 0.315), rgba(129, 1, 1, 0.192)), url('https://www.freeiconspng.com/uploads/3d-grid-png-image-20.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.navbar{
+  background-image: linear-gradient(to right, rgba(0, 6, 95, 0.315), rgba(129, 1, 1, 0.192));
+}
+/* Services Section CSS */
+.color-grading{
+  padding: 0;
+  height: 400px;
+  width: 400px;
+}
+.contact-info-area{
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(to right, rgba(0, 6, 95, 0.164), rgba(129, 1, 1, 0.056)) ;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+}
+.contact-area{
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.116), rgba(255, 255, 255, 0.192)) ;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.body-area {
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(to right, rgba(0, 6, 95, 0.164), rgba(129, 1, 1, 0.055)) ;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height:fit-content;
+  width: 60%;
+  padding: 30px;
+  padding-left: 120px;
+  margin-left: -100px;
+}
+.body-area:hover .button-rounded{
+  display: block;
+}
+.body-area:hover{
+  margin-bottom: 15px;
+}
+.button-rounded{
+  font-weight: 200;
+  transition: display 0.3s; 
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 20px;
+  display: none;
+}
+.tag-area{
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.281), rgba(255, 255, 255, 0.164));
+  padding-top:2px;
+  width:max-content;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+}
+.ql-editor {
+  font-size: 18px;
+}
+.contact-section{
+  background-image:linear-gradient(to bottom, rgba(0, 6, 95, 0.301) 70%, rgba(78, 1, 129, 0.219));
+  padding: 100px 50px;
+}
+.btn-contact{
+  background-image: linear-gradient( 1deg, rgba(72, 79, 97, .2) -31.8%, rgba(72, 79, 97, 0) 28.65% ), linear-gradient( 137deg, #fffffff6 2.87%, rgba(206, 210, 220, .95) 72.77% );
+}
+.gallery-img, .keen-slider{
+  width:500px !important;
+  height: 500px !important;
+}
+.previous-btn{
+  position: absolute;
+}
+/* Project Section */
+#projects{
+  margin: 100px 0;
+}
+.Project-sec{
+  background-image: url("https://i.ibb.co/L585P32/project-bg.png");
+  background-blend-mode: hue;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 50px;
+}
+.gradient-text {
+  background: -webkit-linear-gradient(#eee, #333);
+  font-size: 30px !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flip-container {
+  perspective: 1000px;
+  position: relative;
+}
+.flipping{
+  width: 600px !important;
+  padding: 10px;
+}
+.css-17ywjgh{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+  gap: 15px;
+  border-radius: 20px !important;
+}
+.flip-image {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  border-radius: 20px;
+  width: 350px;
+  height: 180px;
+}
+
+.flipping:hover .flip-image {
+  transform: translateX(-35px) scale(1.1) rotateY(-50deg);
+  border-radius: 20px;
+  filter: blur(0.5px);
+  box-shadow: 0 0em 1em rgba(255, 255, 255, 0.4);
+}
+
+.arrow-icon {
+  visibility: hidden;
+  transition: visibility 0.6s, opacity 0.6s;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  background-color: #eeeeee8e;
+  padding: 10px 10px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 0.2em 0.3em 0.3em rgba(255, 255, 255, 0.2);
+}
+
+.flipping:hover .arrow-icon {
+  visibility: visible;
+  opacity: 1;
+}
+.text-white{
+  color:white !important;
+  font-family: poppins;
+}
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+  .project-section{
+    padding: 10px;
+  }
+  .project-area{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top:0 ;
+  }
+  
+  .Project-sec{
+    padding: 10px !important;
+  }
+  .section-title{
+    font-size: 30px !important;
+  }
+  .body-area{
+    margin: 0;
+    padding: 30px;
+    width: 95%;
+    margin-top: -50px;
+    margin-bottom: 15px;
+  }
+  .tag-area{
+    width:max-content;
+  }
+  .categories-container {
+  display: flex;
+  gap: 2px; /* Adjust as needed */
+  padding-bottom: 10px; /* Add some bottom padding */
+  overflow: scroll;
+  width: 100%; /* Ensure the container takes full width */
+  flex-wrap: nowrap;
+}
+  .button-rounded{
+    display: block;
+  }
+  .contact-section{
+    padding: 20px;
+  }
+}
+/* tablet */
+@media only screen and (min-width:600px) {
+  .project-area{
+
+  }
+  .Project-sec{
+    padding: 20px;
+  }
+  .body-area{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 15px;
+    width: 70%;
+    margin: 0;
+    margin-left: -40px;
+  }
+  .tag-area{
+    width:fit-content;
+    font-size: 15px;
+  }
+  .section-title{
+    font-size: 50px;
+  }
+  .contact-section{
+    padding: 50px !important;
+  }
+}
+
