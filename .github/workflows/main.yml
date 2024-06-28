@@ -1,0 +1,68 @@
+name: Deploy Application
+
+on:
+  push:
+    branches:
+      - main  # Replace with your branch name
+
+jobs:
+  deploy-frontend:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Sync Frontend Directory
+        run: |
+          rsync -av --delete /home/ubuntu/my-website/actions-runner/_work/my-website/my-website/Md-Ashraful-Islam/ /home/ubuntu/my-website/Md-Ashraful-Islam/
+
+      - name: Build and Deploy Frontend
+        run: |
+          cd /home/ubuntu/my-website/Md-Ashraful-Islam
+          npm install
+          npm run build
+          sudo cp -r ./dist/* /var/www/html
+
+      - name: Restart Nginx
+        run: |
+          sudo systemctl restart nginx
+
+  deploy-backend:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install PM2 Globally
+        run: sudo npm install -g pm2
+
+      - name: Sync Backend Directory
+        run: |
+          rsync -av --delete /home/ubuntu/my-website/actions-runner/_work/my-website/my-website/md-ashraful-islam-server/ /home/ubuntu/my-website/md-ashraful-islam-server/
+
+      - name: Install Dependencies
+        run: |
+          cd /home/ubuntu/my-website/md-ashraful-islam-server
+          npm install
+
+      - name: Restart Backend
+        run: |
+          cd /home/ubuntu/my-website/md-ashraful-islam-server
+          # Stop any existing PM2 process
+          sudo pm2 stop index.js || true
+          # Start the new process without autorestart
+          sudo pm2 start index.js
